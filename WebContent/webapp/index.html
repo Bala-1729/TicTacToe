@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Tic Tac Toe</title>
+    <script defer type="text/javascript" src="js_file.js"></script>
+    <script
+      type="text/javascript"
+      src="https://tipengine.zoho.com/js/jquery-1.11.3.min.js"
+    ></script>
+    <style>
+      .heading {
+        color: red;
+        text-align: center;
+      }
+
+      input {
+        text-align: center;
+        margin: 20px;
+        padding: 5px;
+        width: 30px;
+        cursor: pointer;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      p {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .player1 {
+        background-color: red;
+      }
+
+      .player2 {
+        background-color: green;
+      }
+
+      .button {
+        width: auto;
+        display:none;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="heading">Let's Play Tic Tac Toe!</h1>
+    <div onclick="changeValue()">
+      <table class="center">
+        <tr>
+          <td>
+            <input id="1" name="1" type="button" value="." />
+          </td>
+          <td>
+            <input id="2" name="2" type="button" value="." />
+          </td>
+          <td>
+            <input id="3" name="3" type="button" value="." />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input id="4" name="4" type="button" value="." />
+          </td>
+          <td>
+            <input id="5" name="5" type="button" value="." />
+          </td>
+          <td>
+            <input id="6" name="6" type="button" value="." />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input id="7" name="7" type="button" value="." />
+          </td>
+          <td>
+            <input id="8" name="8" type="button" value="." />
+          </td>
+          <td>
+            <input id="9" name="9" type="button" value="." />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h2 id="result"></h2>
+      <button id="reset" class="button" onclick="reload()">Reset</button>
+      <button id="cpu_first" class="button" style="display:block" onclick="changeValue()">CPU First</button>
+    </div>
+  </body>
+</html>
