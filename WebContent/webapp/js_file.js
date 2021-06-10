@@ -86,7 +86,7 @@ function changeValue() {
             doc = document.getElementById(parseInt(response["cpu_position"])+1)
             doc.setAttribute("value","O");
             array[parseInt(response["cpu_position"])]='O';
-            doc.className = "player2";  
+            doc.className = "player2";
         }
     });      
 }
