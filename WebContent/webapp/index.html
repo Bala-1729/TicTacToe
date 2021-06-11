@@ -3,11 +3,11 @@
   <head>
     <meta charset="ISO-8859-1" />
     <title>Tic Tac Toe</title>
-    <script defer type="text/javascript" src="js_file.js"></script>
-    <script
+    <script type="text/javascript" src="js_file.js"></script>
+    <!-- <script
       type="text/javascript"
       src="https://tipengine.zoho.com/js/jquery-1.11.3.min.js"
-    ></script>
+    ></script> -->
     <style>
       .heading {
         color: red;
@@ -20,6 +20,7 @@
         padding: 5px;
         width: 30px;
         cursor: pointer;
+        background-color: transparent;
       }
 
       table,
@@ -48,6 +49,10 @@
         background-color: green;
       }
 
+      .undo {
+        background-color: transparent;
+      }
+
       .button {
         width: auto;
         display:none;
@@ -56,12 +61,17 @@
       h2 {
         text-align: center;
       }
+
+      .level_button{
+        margin:20px;
+      }
+
     </style>
   </head>
 
-  <body>
+  <body onload="cleanSlate()">
     <h1 class="heading">Let's Play Tic Tac Toe!</h1>
-    <div onclick="changeValue()">
+    <div onclick="changeValue();">
       <table class="center">
         <tr>
           <td>
@@ -103,7 +113,15 @@
     <div>
       <h2 id="result"></h2>
       <button id="reset" class="button" onclick="reload()">Reset</button>
-      <button id="cpu_first" class="button" style="display:block" onclick="changeValue()">CPU First</button>
+      <!-- <button id="cpu_first" class="button" style="display:block" onclick="changeValue()">CPU First</button> -->
+    </div>
+    <div id="level" style="text-align: center;" onclick="setLevel()">
+      <button id="novice" class="level_button" >Novice (default)</button>
+      <button id="expert" class="level_button">Expert</button>
+    </div>
+    <div id="undoRedo" style="text-align:center;display: none;" onclick="undoRedo()">
+      <button id="undo" class="level_button" >Undo</button>
+      <button id="redo" class="level_button" >Redo</button>
     </div>
   </body>
 </html>
