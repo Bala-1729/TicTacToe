@@ -97,7 +97,6 @@ public class ResponseServlet extends HttpServlet {
 		ResponseServlet.op = new ArrayList<>();
 		ResponseServlet.map = new HashMap<>();
 		ResponseServlet.top=-1;
-		Algorithms.move=0;
 	}
 	
 	public void display() {
